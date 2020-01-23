@@ -1,9 +1,3 @@
-<?php
-include('login.php');
-if (isset($_SESSION['login_user'])) {
-    header("location: home.php");
-}
-?>
 <!DOCTYPE html>
 <html>
 
@@ -19,21 +13,15 @@ if (isset($_SESSION['login_user'])) {
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h3>Sign In</h3>
-                    <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
-                    </div>
+                    <h3>Sign Up</h3>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form action="registro.php" method="post">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input id="name" name="username" type="text" class="form-control" placeholder="Username">
-
+                            <input id="name" name="username" type="text" class="form-control" placeholder="Username" required>
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
@@ -45,14 +33,13 @@ if (isset($_SESSION['login_user'])) {
                             <input type="checkbox">Remember Me
                         </div>
                         <div class="form-group">
-                            <input name="submit" type="submit" value="Login" class="btn float-right login_btn">
+                            <input name='registro' type="submit" value="Register" class="btn float-right login_btn">
                         </div>
-                        <span><?php echo $error; ?></span>
                     </form>
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="registroPage.php">Sign Up</a>
+                        Already have an account?<a href="index.php">Sign in</a>
                     </div>
                 </div>
             </div>

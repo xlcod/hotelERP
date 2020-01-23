@@ -11,15 +11,13 @@ if (isset($_POST['registro'])) {
         $myPassword = $_POST['password'];
 
         //mi query
-        $query  = "INSERT INTO  usuarios (id,username,password) ";
-		$query .= "VALUES ('$id','$username','$myPassword')";
-
-
+        $query  = "INSERT INTO  empleados (username, password) ";
+        $query .= "VALUES ('$username','$myPassword')";
 
         $stmt = $conn->prepare($query);
         echo ($query);
         $stmt->execute();
-        header("Location: index.php");
+        header("Location: home.php");
 
         mysqli_close($conn);
     }
