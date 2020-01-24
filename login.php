@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $query = "SELECT username, password from empleados where username=? AND password=? LIMIT 1";
+        $query = "SELECT username, password from usuarios where username=? AND password=? LIMIT 1";
 
         $stmt = $conn->prepare($query);
         $stmt->bind_param("ss", $username, $password);
