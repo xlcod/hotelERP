@@ -1,5 +1,4 @@
-
-
+<?php require 'bbdd.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -140,7 +139,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Huéspedes</h4>
-                  <p class="card-category"> Lista de huéspedes  </p>
+                  <p class="card-category"> Lista de huéspedes </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -156,115 +155,36 @@
                           Country
                         </th>
                         <th>
-                          City
+                          DNI
                         </th>
                         <th>
-                          Salary
+                          RoomID
                         </th>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
-                        </tr>
+                        <?php
+
+                        $query = "SELECT * FROM huespedes";
+
+                        $result = $conn->query($query);
+
+                        if (isset($result) && $result) {
+
+                          while ($row = $result->fetch_assoc()) {
+
+                        ?>
+                            <tr>
+                              <td><?php echo ($row['id']); ?></td>
+                              <td><?php echo ($row['nombre']); ?></td>
+                              <td><?php echo ($row['country']); ?></td>
+                              <td><?php echo ($row['dni']); ?></td>
+                              <td><?php echo ($row['roomId']); ?></td>
+                            </tr>
+                        <?php
+
+                          }
+                        }
+                        ?>
                       </tbody>
                     </table>
                   </div>
@@ -275,7 +195,7 @@
               <div class="card card-plain">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title mt-0"> Reservas y habitaciones</h4>
-                  <p class="card-category"> Lista de habitaciones y reservas</p>
+                  <p class="card-category"> Lista de habitaciones y reservas </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -285,121 +205,42 @@
                           ID
                         </th>
                         <th>
-                          Name
+                          Numero
                         </th>
                         <th>
-                          Country
+                          Planta
                         </th>
                         <th>
-                          City
+                          Ocupada
                         </th>
                         <th>
-                          Salary
+                          IdHuésped
                         </th>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td>
-                            $36,738
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td>
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td>
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td>
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td>
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td>
-                            $78,615
-                          </td>
-                        </tr>
+                        <?php
+
+                        $query = "SELECT * FROM reservas";
+
+                        $result = $conn->query($query);
+
+                        if (isset($result) && $result) {
+
+                          while ($row = $result->fetch_assoc()) {
+
+                        ?>
+                            <tr>
+                              <td><?php echo ($row['id']); ?></td>
+                              <td><?php echo ($row['numero']); ?></td>
+                              <td><?php echo ($row['planta']); ?></td>
+                              <td><?php echo ($row['ocupada']); ?></td>
+                              <td><?php echo ($row['idHuesped']); ?></td>
+                            </tr>
+                        <?php
+
+                          }
+                        }
+                        ?>
                       </tbody>
                     </table>
                   </div>
