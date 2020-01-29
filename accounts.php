@@ -3,7 +3,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+<?php 
+header('Content-Type: text/html; charset=UTF-8');
+?>
+  <meta charset="UTF-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -89,30 +92,6 @@
               </div>
             </form>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
-                </div>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
@@ -175,8 +154,8 @@
                         ?>
                             <tr>
                               <td><?php echo ($row['id']); ?></td>
-                              <td><?php echo ($row['nombre']); ?></td>
-                              <td><?php echo ($row['country']); ?></td>
+                              <td><?php echo utf8_encode ($row['nombre']); ?></td>
+                              <td><?php echo utf8_encode ($row['country']); ?></td>
                               <td><?php echo ($row['dni']); ?></td>
                               <td><?php echo ($row['roomId']); ?></td>
                             </tr>
@@ -192,14 +171,14 @@
               </div>
             </div>
             <div class="col-md-12">
-              <div class="card card-plain">
+              <div class="card ">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title mt-0"> Reservas y habitaciones</h4>
                   <p class="card-category"> Lista de habitaciones y reservas </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table">
                       <thead class="">
                         <th>
                           ID
