@@ -7,7 +7,7 @@ if (!isset($_SESSION['login_user'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -30,39 +30,33 @@ if (!isset($_SESSION['login_user'])) {
         <div class="sidebar" data-color="purple" data-background-color="white" data-image="img/sidebar-1.jpg">
             <div class="logo">
                 <a class="simple-text logo-normal">
-                    DashBoard
+                    Panel de control
                 </a>
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="nav-item active  ">
                         <a class="nav-link" href="home.php">
-                            <i class="material-icons">dashboard</i>
-                            <p>Dashboard</p>
+                            <i class="material-icons">Control</i>
+                            <p>Control</p>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="userProfile.php">
                             <i class="material-icons">person</i>
-                            <p>User Profile</p>
+                            <p>Perfiles de Usuario</p>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="accounts.php">
                             <i class="material-icons">content_paste</i>
-                            <p>Accounts</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="">
-                            <i class="material-icons">location_ons</i>
-                            <p>Maps</p>
+                            <p>Cuentas y Reservas</p>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="notifications.php">
                             <i class="material-icons">notifications</i>
-                            <p>Notifications</p>
+                            <p>Ayuda</p>
                         </a>
                     </li>
                     <li class="nav-item active-pro ">
@@ -546,28 +540,7 @@ if (!isset($_SESSION['login_user'])) {
             <footer class="footer">
                 <div class="container-fluid">
                     <nav class="float-left">
-                        <ul>
-                            <li>
-                                <a href="https://www.creative-tim.com">
-                                    Creative Tim
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://creative-tim.com/presentation">
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://blog.creative-tim.com">
-                                    Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.creative-tim.com/license">
-                                    Licenses
-                                </a>
-                            </li>
-                        </ul>
+                        
                     </nav>
                 </div>
             </footer>

@@ -1,20 +1,6 @@
-<!--
-=========================================================
- Material Dashboard - v2.1.1
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/material-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
-
- Coded by Creative Tim
-
-=========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8" />
@@ -42,39 +28,33 @@
     -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-        Notifications
+        Panel de control
         </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item  ">
             <a class="nav-link" href="home.php">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+              <i class="material-icons">Control</i>
+              <p>Control</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="userProfile.php">
               <i class="material-icons">person</i>
-              <p>User Profile</p>
+              <p>Perfiles de Usuario</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="accounts.php">
               <i class="material-icons">content_paste</i>
-              <p>Accounts</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
+              <p>Cuentas y Reservas</p>
             </a>
           </li>
           <li class="nav-item active ">
             <a class="nav-link" href="notifications.php">
               <i class="material-icons">notifications</i>
-              <p>Notifications</p>
+              <p>Ayuda</p>
             </a>
           </li>
           <li class="nav-item active-pro ">
@@ -279,28 +259,6 @@
       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
           </nav>
         </div>
       </footer>

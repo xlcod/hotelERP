@@ -11,7 +11,7 @@ if (isset($_POST['registro'])) {
         $myPassword = $_POST['password'];
 
         //mi query
-        $query  = "INSERT INTO  empleados (username, password) ";
+        $query  = "INSERT INTO  usuarios (username, password) ";
         $query .= "VALUES ('$username','$myPassword')";
 
         $stmt = $conn->prepare($query);
