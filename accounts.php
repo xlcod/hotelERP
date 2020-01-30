@@ -3,9 +3,9 @@
 <html lang="es">
 
 <head>
-<?php 
-header('Content-Type: text/html; charset=UTF-8');
-?>
+  <?php
+  header('Content-Type: text/html; charset=UTF-8');
+  ?>
   <meta charset="UTF-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -47,7 +47,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <li class="nav-item ">
             <a class="nav-link" href="userProfile.php">
               <i class="material-icons">person</i>
-              <p>Perfiles de Usuario</p>
+              <p>Habitaciones</p>
             </a>
           </li>
           <li class="nav-item active ">
@@ -154,8 +154,8 @@ header('Content-Type: text/html; charset=UTF-8');
                         ?>
                             <tr>
                               <td><?php echo ($row['id']); ?></td>
-                              <td><?php echo utf8_encode ($row['nombre']); ?></td>
-                              <td><?php echo utf8_encode ($row['country']); ?></td>
+                              <td><?php echo utf8_encode($row['nombre']); ?></td>
+                              <td><?php echo utf8_encode($row['country']); ?></td>
                               <td><?php echo ($row['dni']); ?></td>
                               <td><?php echo ($row['roomId']); ?></td>
                             </tr>
@@ -166,6 +166,65 @@ header('Content-Type: text/html; charset=UTF-8');
                         ?>
                       </tbody>
                     </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- formulario -->
+            <div class="col-md-12">
+              <div class="content">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="card">
+                        <div class="card-header card-header-primary">
+                          <h4 class="card-title">Nuevo registro</h4>
+                          <p class="card-category">Introducir los datos</p>
+                        </div>
+                        <div class="card-body">
+                          <form action="insertForm.php" method="POST">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">ID</label>
+                                  <input name="id" type="text" class="form-control">
+                                </div>
+                              </div>
+                              <div class="col-md-5">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">Nombre</label>
+                                  <input name="nombre" type="text" class="form-control">
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">Country</label>
+                                  <input name="country" type="text" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-5">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating"> DNI</label>
+                                  <input name="dni" type="text" class="form-control">
+                                </div>
+                              </div>
+                              <div class="col-md-2">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">Room id</label>
+                                  <input name="roomID" type="text" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                        <div class="clearfix"></div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -229,71 +288,14 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
         </div>
       </div>
-      <!-- formulario -->
-      <div class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title">Nuevo registro</h4>
-                  <p class="card-category">Introducir los datos</p>
-                </div>
-                <div class="card-body">
-                  <form action="insertForm.php" method="POST">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">ID</label>
-                          <input name="id" type="text" class="form-control" >
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Nombre</label>
-                          <input  name="nombre" type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <input  name="country"type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating"> DNI</label>
-                          <input name="dni" type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-2">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Room id</label>
-                          <input  name="roomID" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                      
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-                    <div class="clearfix"></div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-          </nav>
-        </div>
-      </footer>
     </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <nav class="float-left">
+        </nav>
+      </div>
+    </footer>
+  </div>
   </div>
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">

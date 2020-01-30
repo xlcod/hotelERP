@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `hotelerp`
 --
+DROP DATABASE IF EXISTS hotelerp;
+CREATE DATABASE IF NOT EXISTS hotelerp;
+USE hotelerp;
 
 -- --------------------------------------------------------
 

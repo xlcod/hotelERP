@@ -44,7 +44,7 @@ if (!isset($_SESSION['login_user'])) {
                     <li class="nav-item ">
                         <a class="nav-link" href="userProfile.php">
                             <i class="material-icons">person</i>
-                            <p>Perfiles de Usuario</p>
+                            <p>Habitaciones</p>
                         </a>
                     </li>
                     <li class="nav-item ">
