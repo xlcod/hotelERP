@@ -46,7 +46,7 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="userProfile.php">
-              <i class="material-icons">person</i>
+              <i class="material-icons">store</i>
               <p>Habitaciones</p>
             </a>
           </li>
@@ -178,7 +178,7 @@
                     <div class="col-md-8">
                       <div class="card">
                         <div class="card-header card-header-primary">
-                          <h4 class="card-title">Nuevo registro</h4>
+                          <h4 class="card-title">Nuevo Huesped</h4>
                           <p class="card-category">Introducir los datos</p>
                         </div>
                         <div class="card-body">
@@ -220,7 +220,7 @@
 
                         </div>
 
-                        <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                        <button type="submit" class="btn btn-primary pull-right">Añadir Huesped</button>
                         <div class="clearfix"></div>
                         </form>
                       </div>

@@ -41,7 +41,7 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="userProfile.php">
-              <i class="material-icons">person</i>
+              <i class="material-icons">store</i>
               <p>Habitaciones</p>
             </a>
           </li>
