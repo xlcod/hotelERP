@@ -20,8 +20,8 @@
 <body class="">
   <div class="sidebar" data-color="purple" data-background-color="white" data-image="img/sidebar-1.jpg">
     <div class="logo">
-
-      Panel de Control
+      <a class="simple-text logo-normal">
+        Habitaciones
       </a>
     </div>
     <div class="sidebar-wrapper">
@@ -49,12 +49,6 @@
           <a class="nav-link" href="notifications.php">
             <i class="material-icons">notifications</i>
             <p>Ayuda</p>
-          </a>
-        </li>
-        <li class="nav-item active-pro ">
-          <a class="nav-link" href="">
-            <i class="material-icons">unarchive</i>
-            <p>Hola buenos dias</p>
           </a>
         </li>
       </ul>

@@ -59,12 +59,6 @@ if (!isset($_SESSION['login_user'])) {
                             <p>Ayuda</p>
                         </a>
                     </li>
-                    <li class="nav-item active-pro ">
-                        <a class="nav-link" href="">
-                            <i class="material-icons">unarchive</i>
-                            <p>Hola buenos dias</p>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
