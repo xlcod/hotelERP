@@ -8,7 +8,7 @@ $nombre = $_POST['nombre'];
 $country = $_POST['country'];
 $dni = $_POST['dni'];
 $roomID = $_POST['roomID'];
-
+    
 
 $query  = "INSERT INTO  huespedes (id,nombre,country,dni,roomId) ";
 $query .= "VALUES ('$id','$nombre','$country','$dni','$roomID')";

@@ -285,10 +285,71 @@
                 </div>
               </div>
             </div>
+            <!--Formulario reservas-->
+    <div class="col-md-12">
+              <div class="content">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="card">
+                        <div class="card-header card-header-primary">
+                          <h4 class="card-title">Nueva Reserva</h4>
+                          <p class="card-category">Introducir los datos de la reserva</p>
+                        </div>
+                        <div class="card-body">
+                          <form action="insertFormHues.php" method="POST">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">ID</label>
+                                  <input name="id" type="text" class="form-control">
+                                </div>
+                              </div>
+                              <div class="col-md-5">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">Numero</label>
+                                  <input name="numero" type="text" class="form-control">
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">Planta</label>
+                                  <input name="planta" type="text" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-5">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating"> Ocupada</label>
+                                  <input name="ocupada" type="text" class="form-control">
+                                </div>
+                              </div>
+                              <div class="col-md-2">
+                                <div class="form-group">
+                                  <label class="bmd-label-floating">Huesped id</label>
+                                  <input name="huesID" type="text" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary pull-right">Añadir Reserva</button>
+                        <div class="clearfix"></div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
+            
     <footer class="footer">
       <div class="container-fluid">
         <nav class="float-left">
