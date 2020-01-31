@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-01-2020 a las 20:19:46
+-- Tiempo de generación: 31-01-2020 a las 17:37:14
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -21,9 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `hotelerp`
 --
-DROP DATABASE IF EXISTS hotelerp;
-CREATE DATABASE IF NOT EXISTS hotelerp;
-USE hotelerp;
 
 -- --------------------------------------------------------
 
@@ -57,7 +54,7 @@ CREATE TABLE `huespedes` (
   `nombre` varchar(30) NOT NULL,
   `country` varchar(20) NOT NULL,
   `dni` varchar(20) NOT NULL,
-  `roomId` int(10) NOT NULL
+  `roomId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -80,7 +77,7 @@ INSERT INTO `huespedes` (`id`, `nombre`, `country`, `dni`, `roomId`) VALUES
 --
 
 CREATE TABLE `reservas` (
-  `id` int(10) NOT NULL,
+  `id` int(11) NOT NULL,
   `numero` int(10) NOT NULL,
   `planta` varchar(10) NOT NULL,
   `ocupada` varchar(10) NOT NULL,
@@ -97,8 +94,8 @@ INSERT INTO `reservas` (`id`, `numero`, `planta`, `ocupada`, `idHuesped`) VALUES
 (3, 103, 'Primera', 'ocupada', 3),
 (4, 104, 'Primera', 'ocupada', 4),
 (5, 105, 'Primera', 'ocupada', 5),
-(6, 206, 'Segunda', 'ocupada', 6),
-(7, 207, 'Segunda', 'ocupada', 7);
+(6, 201, 'Segunda', 'ocupada', 6),
+(7, 202, 'Segunda', 'ocupada', 7);
 
 --
 -- Índices para tablas volcadas
@@ -114,6 +111,13 @@ ALTER TABLE `empleados`
 -- Indices de la tabla `huespedes`
 --
 ALTER TABLE `huespedes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `roomId` (`roomId`);
+
+--
+-- Indices de la tabla `reservas`
+--
+ALTER TABLE `reservas`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -131,6 +135,16 @@ ALTER TABLE `empleados`
 --
 ALTER TABLE `huespedes`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `huespedes`
+--
+ALTER TABLE `huespedes`
+  ADD CONSTRAINT `huespedes_ibfk_1` FOREIGN KEY (`roomId`) REFERENCES `reservas` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
