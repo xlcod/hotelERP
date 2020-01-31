@@ -21,11 +21,6 @@
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
         Panel de control
@@ -284,12 +279,7 @@
         <li class="button-container">
           <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
         </li>
-        <!-- <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li> -->
+        
         <li class="button-container">
           <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
             View Documentation
@@ -374,7 +364,7 @@
         }
 
         $('.fixed-plugin a').click(function(event) {
-          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+         
           if ($(this).hasClass('switch-trigger')) {
             if (event.stopPropagation) {
               event.stopPropagation();
@@ -508,12 +498,11 @@
             }, 300);
           }
 
-          // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
+         
             window.dispatchEvent(new Event('resize'));
           }, 180);
 
-          // we stop the simulation of Window Resize after the animations are completed
+         
           setTimeout(function() {
             clearInterval(simulateWindowResize);
           }, 1000);
@@ -524,7 +513,7 @@
   </script>
   <script>
     $(document).ready(function() {
-      //init DateTimePickers
+     
       md.initFormExtendedDatetimepickers();
     });
   </script>

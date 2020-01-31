@@ -327,7 +327,7 @@ if (!isset($_SESSION['login_user'])) {
                                                 </tbody>
                                             </table>
                                         </div>
-                                        
+
                                         <div class="tab-pane" id="settings">
                                             <table class="table">
                                                 <tbody>
